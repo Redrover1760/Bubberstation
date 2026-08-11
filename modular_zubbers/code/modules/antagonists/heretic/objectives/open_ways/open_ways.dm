@@ -307,12 +307,16 @@
 
 	if(prob(50)) // "easier" set of items
 		open_requirements[pick(organs_copy)] += 1
-		open_requirements[pick_n_take(easy_copy)] += 2
-		open_requirements[pick_n_take(uncommons_copy)] += 2
+		open_requirements[pick_n_take(easy_copy)] += 1
+		open_requirements[pick_n_take(easy_copy)] += 1
+		open_requirements[pick_n_take(uncommons_copy)] += 1
+		open_requirements[pick_n_take(uncommons_copy)] += 1
 	else // "harder" set of items
-		open_requirements[pick_n_take(organs_copy)] += 2
+		open_requirements[pick_n_take(organs_copy)] += 1
+		open_requirements[pick_n_take(organs_copy)] += 1
 		open_requirements[pick(easy_copy)] += 1
-		open_requirements[pick_n_take(exotics_copy)] += 2
+		open_requirements[pick_n_take(exotics_copy)] += 1
+		open_requirements[pick_n_take(exotics_copy)] += 1
 
 /obj/effect/unopened_way/no_announce
 	announce_opening = FALSE
